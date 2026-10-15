@@ -1,0 +1,16 @@
+{
+  "source_commit": "68c28ea4ef5a81279d69c0e7d3b6433f0945192b",
+  "step_sha256": "0e8da3f8980dbe0e61d960b7c77f1c105a07359f655c379e0321389d7d585410",
+  "units": "mm; bounds [min_x,min_y,min_z,max_x,max_y,max_z] in STEP coordinates",
+  "nozzle_tip": [335.47522, 445.07842, 425.00270],
+  "nominal_bed_x_origin": 586.77984,
+  "printer_axes_relative_to_step": [-1, -1, 1],
+  "components": [
+    {"id": "JXHMP4802-03002-a", "envelope": "x_beam_and_rail", "bounds": [48.77984,384.35841,471.70269,634.77984,404.35842,491.70269]},
+    {"id": "MGNR12R566C", "envelope": "x_beam_and_rail", "bounds": [58.77984,404.35842,475.70269,624.77984,412.35842,487.70269]},
+    {"id": "JXHMP4802-03007-d", "envelope": "ptfe_bracket_mount", "bounds": [173.77984,359.35841,471.70269,228.77984,384.35842,503.59796]},
+    {"id": "JXHMP4802-03008-d", "envelope": "ptfe_wiring_bracket", "bounds": [89.81761,361.35841,491.70269,263.61274,376.35841,578.76014]}
+  ],
+  "rigid_toolhead_xy_union": [299.87545,380.85841,372.59568,487.82842],
+  "caveat": "Derived CAD dimensions, not actual-machine certification. Flexible routing needs operator confirmation."
+}

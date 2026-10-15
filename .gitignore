@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Local research downloads, private printer evidence and Python runtime
+.research/
+local/
+artifacts/
+.venv/
+recovery*.json
+*.gcode
