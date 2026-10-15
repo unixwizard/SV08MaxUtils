@@ -334,6 +334,21 @@ def test_current_homed_z_overrides_stale_interruption_estimate(
     assert log == []
 
 
+def test_home_from_known_z_is_reused_even_when_old_interruption_z_differs(
+    bundle, native, monkeypatch
+):
+    obj, log, sd, head, _ = controller(bundle, native, monkeypatch)
+    head.homed = "xyz"
+    head.pos[2] = 80.0
+    obj.cmd_home(Gcmd(CONFIRM=1))
+    assert obj.last_plan["estimated_start_z"] == 80.0
+    homes = [v for v in log if isinstance(v, tuple) and v[0] == "home"]
+    obj.cmd_resume(Gcmd(CONFIRM=1))
+    assert obj.last_plan["estimated_start_z"] == 80.0
+    assert homes == [v for v in log if isinstance(v, tuple) and v[0] == "home"]
+    sd.current_file.close()
+
+
 def test_resume_removes_intervening_g92_xyz_without_extrusion(
     bundle, native, monkeypatch
 ):

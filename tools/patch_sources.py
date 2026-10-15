@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: GPL-3.0-only
 # Patch anchors derived from Klipper (Kevin O'Connor) and Sovol's fork.
 """Build bounded-batch patches against exact supported Sovol sources."""
 

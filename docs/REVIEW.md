@@ -25,6 +25,8 @@ implementer, **not an independent hardware certification**.
   target/tool offsets and unreviewed state rather than guessing them.
 - Made resume reuse a matching recovery-home park, but use current homed Z
   instead of a stale interruption estimate when a new home is necessary.
+  A further regression covers preserving that newly homed start estimate across
+  the subsequent resume, rather than reverting to the old interruption height.
 - Reset intervening G92 XYZ rebasing before offset restoration. Preserved E
   mode/coordinate without adding retraction, unretraction, prime or purge.
 - Loaded/reset the native SD file before restoring object metadata, then bound
@@ -48,7 +50,7 @@ envelopes, native mesh math, native SD seeking, one-shot resume and installer
 rollback. Run `python -m pytest -q` from the repository root. The GitHub workflow
 runs the same network-free tests on Linux with Python 3.9, 3.11 and 3.14.
 
-On the development workstation the final suite passes **118 tests**. Ruff's
+On the development workstation the final suite passes **119 tests**. Ruff's
 fatal-error/undefined-name checks and Python-3.9 syntax parsing also pass.
 
 An additional private offline replay used the unchanged **117,054,583-byte**

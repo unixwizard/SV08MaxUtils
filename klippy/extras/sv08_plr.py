@@ -216,7 +216,10 @@ class SV08PLR:
         cfg["probe_bounds"] = [hp["min_x"], hp["min_y"], hp["max_x"], hp["max_y"]]
         start_z = data["estimated_physical_z"]
         start_basis = "reviewed estimate after loss of homing"
-        if not self.already_homed(data):
+        if self.already_homed(data):
+            start_z = self.last_plan["estimated_start_z"]
+            start_basis = "reusing completed recovery-home plan"
+        else:
             head = self.status("toolhead")
             if "z" in head["homed_axes"]:
                 # A known current Z is better than an old interruption estimate.

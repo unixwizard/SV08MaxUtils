@@ -8,8 +8,8 @@ a requirement to display branding in a UI.
 `tests/fixtures/*.py.txt` are unmodified source snapshots from Sovol's Klipper
 installation/fork, retained to make source compatibility and native offline
 tests reproducible. Each retains its original copyright/license header.
-`tools/patch_sources.py` contains derived source anchors/patches and is GPLv3
-or later. Generated patched Klipper files remain GPL-covered, **not MIT-only**.
+`tools/patch_sources.py` contains derived source anchors/patches and is GPLv3.
+Generated patched Klipper files remain GPL-covered, **not MIT-only**.
 Distributions incorporating Klipper must satisfy its GPL obligations; the MIT
 license does not supersede them. Full license: [GPL-3.0.txt](licenses/GPL-3.0.txt).
 
